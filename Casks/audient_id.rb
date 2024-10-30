@@ -42,5 +42,9 @@ cask "audient_id" do
 
   app "iD.app"
 
-  zap trash: "~/Library/Application Support/Audient"
+  zap trash: [
+    "~/Library/Application Support/Audient",
+    "~/Library/Preferences/com.audient.id.plist",
+    "~/Library/Saved Application State/com.audient.id.savedState",
+  ]
 end
