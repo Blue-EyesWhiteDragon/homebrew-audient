@@ -23,10 +23,10 @@ cask "audient-id" do
   end
   on_high_sierra :or_newer do
     live_search = %r{href=.*?/iD(?:%20|\s)*v?(\d+(?:\.\d+)*(?:b\d+)?)\.dmg}i
-    year = 2024
+    year = 2025
 
-    version "4.4.0b1"
-    sha256 "cb213a35c84d63ca5fda01e3f944447ae2e95ee1efb8de8c0efcf44b84bc2bce"
+    version "4.4.2b6"
+    sha256 "cd21b2e0aaaf8511307550255a1c4e67308f0480a42778995ed2546847818dfc"
 
     url "https://d9w4fhj63j193.cloudfront.net/#{year}/iD%20Drivers/iD%20v#{version}.dmg",
         verified: "d9w4fhj63j193.cloudfront.net/"
