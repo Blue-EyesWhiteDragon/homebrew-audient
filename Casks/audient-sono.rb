@@ -21,17 +21,22 @@ cask "audient-sono" do
 
   pkg "Sono v#{version}.pkg"
 
-  uninstall pkgutil: [
-    "com.audient.pkg.sono.app",
-    "com.twonotes.pkg.remote.app",
-  ]
+  uninstall \
+    launchctl: "com.audient.sono.service",
+    pkgutil:   [
+      "com.audient.pkg.sono.app",
+      "com.twonotes.pkg.remote.app",
+    ],
+    delete:    [
+      "/Library/Application Support/Audient/#{appliance}",
+      "/Library/LaunchAgents/com.audient.sono.service.plist",
+    ]
 
   zap trash: [
-    "~/Library/Application Support/Audient",
     "~/Library/Caches/com.two-notes.TorpedoRemote",
     "~/Library/HTTPStorages/com.two-notes.TorpedoRemote",
     "~/Library/Preferences/com.audient.sono.plist",
-    "~/Library/Preferences/com.audient.sono.service.plist",
     "~/Library/Saved Application State/com.audient.sono.savedState",
+    "~/Documents/Two notes Audio Engineering",
   ]
 end

@@ -29,11 +29,12 @@ cask "audient-id" do
   end
   on_high_sierra :or_newer do
     year = 2025
+    driver_parent = "#{appliance}48"
 
     version "4.4.2b6"
     sha256 "cd21b2e0aaaf8511307550255a1c4e67308f0480a42778995ed2546847818dfc"
 
-    url "https://d9w4fhj63j193.cloudfront.net/#{year}/#{appliance}%20Drivers/#{appliance}%20v#{version}.dmg",
+    url "https://d9w4fhj63j193.cloudfront.net/#{year}/#{driver_parent}/Drivers/#{appliance}%20v#{version}.dmg",
         verified: "d9w4fhj63j193.cloudfront.net/"
 
     livecheck do
@@ -50,8 +51,10 @@ cask "audient-id" do
 
   app "#{appliance}.app"
 
+  uninstall delete: "/Library/Application Support/Audient/#{appliance}"
+
   zap trash: [
-    "~/Library/Application Support/Audient",
+    "~/Library/Logs/com.audient.iD",
     "~/Library/Preferences/com.audient.id.plist",
     "~/Library/Saved Application State/com.audient.id.savedState",
   ]

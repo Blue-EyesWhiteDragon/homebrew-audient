@@ -21,8 +21,9 @@ cask "audient-evo" do
 
   app "#{appliance}.app"
 
+  uninstall delete: "/Library/Application Support/Audient/#{appliance}"
+
   zap trash: [
-    "~/Library/Application Support/Audient",
     "~/Library/Preferences/com.audient.evo.plist",
     "~/Library/Saved Application State/com.audient.evo.savedState",
   ]
