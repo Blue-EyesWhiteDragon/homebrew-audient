@@ -33,10 +33,10 @@ cask "audient-sono" do
     ]
 
   zap trash: [
+    "~/Documents/Two notes Audio Engineering",
     "~/Library/Caches/com.two-notes.TorpedoRemote",
     "~/Library/HTTPStorages/com.two-notes.TorpedoRemote",
     "~/Library/Preferences/com.audient.sono.plist",
     "~/Library/Saved Application State/com.audient.sono.savedState",
-    "~/Documents/Two notes Audio Engineering",
   ]
 end
