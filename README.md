@@ -16,7 +16,7 @@ brew tap blue-eyeswhitedragon/audient
 brew install --cask audient-id
 ```
 
-<!-- ### Sono
+### Sono
 
 ```zsh
 brew install --cask audient-sono
@@ -26,9 +26,11 @@ brew install --cask audient-sono
 
 ```zsh
 brew install --cask audient-evo
-``` -->
+```
 
 ## Note / Caveats
 
 The iD4 MKI was discontinued on Jan 2021 with the launch if the iD4 MKII.
 Audient's <a href="https://support.audient.com/hc/en-us/categories/201449766-iD4-MKI">support</a> for the device still points at the iD software in general, so you should be fine. If not, click on the support link provided previously in this paragraph.
+
+The Sono Installer will install both the Sono Application and the Torpedo Remote Application at the same time. Upon `brew uninstall`, these will both be removed. Upon `brew uninstall --zap`, preferences stored in case of reinstall from both applications will be removed.
